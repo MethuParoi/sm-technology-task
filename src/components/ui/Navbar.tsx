@@ -32,10 +32,10 @@ import {
   closeRegisterModal,
   openLoginModal,
 } from "../../store/features/modalSlice"; // Modal actions
-import LoginModal from "@/app/components/LoginModal";
-import RegisterModal from "@/app/components/RegisterModal";
-import { AppDispatch } from "@/lib/store";
-import { RootState } from "@/lib/store";
+import LoginModal from "../../components/auth/LoginModal"; // Import LoginModal component
+import RegisterModal from "../../components/auth/RegisterModal";
+import { AppDispatch } from "@/store/store";
+import { RootState } from "@/store/store";
 
 export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
