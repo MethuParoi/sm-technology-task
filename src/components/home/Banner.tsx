@@ -1,6 +1,7 @@
 import { Button, Chip } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
+import fruits from "../../../public/Banner/fruits-removebg.png";
 
 const Banner = () => {
   return (
@@ -98,7 +99,7 @@ const Banner = () => {
 
         {/* Download Now Buttons */}
         <div className="absolute left-0 bottom-[10%] space-y-3 z-30">
-          <h3 className="text-base text-black">Download Now</h3>
+          <h3 className="text-base text-black">Download App:</h3>
           <div className="flex items-center gap-4 z-30">
             <button className="w-[140px] h-[40px]">
               <Image
@@ -124,7 +125,7 @@ const Banner = () => {
       <div className="w-[55%] xl:w-[46.5%] h-[auto] aspect-[0.778] hidden md:block absolute right-0 -bottom-[2px] z-20">
         <div className="relative w-full h-full">
           <Image
-            src="/farmer_girl.png"
+            src={fruits}
             alt="Girl with Basket"
             layout="fill"
             objectFit="contain"
