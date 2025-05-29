@@ -56,13 +56,15 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose }) => {
 
   return (
     <Modal open={open} onClose={onClose}>
-      <Box className="w-full max-w-md p-6 mx-auto mt-24 bg-white rounded-lg shadow-lg">
-        <div className="flex justify-between mb-4">
-          <Typography variant="h6">Register</Typography>
+      <Box className="w-[92%] sm:w-full max-w-md p-6 mx-auto mt-24 bg-white rounded-lg shadow-lg">
+        <div className="flex justify-end ">
           <IconButton onClick={onClose}>
             <CloseIcon />
           </IconButton>
         </div>
+        <h1 className="text-2xl font-bold text-center text-gray-700">
+          Register
+        </h1>
 
         <form
           onSubmit={(e) => {

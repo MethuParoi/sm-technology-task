@@ -1,37 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fresh Harvests
+
+**Live Demo:** [Fresh Harvests Live Demo](https:)
+
+Fresh Harvests is a modern e-commerce platform that offers fresh and organic products directly from farms. The website provides a smooth and user-friendly experience for customers to browse various product categories, view product details, add products to the cart, and proceed to checkout.
+
+## Technologies Used
+
+- **Frontend**:
+  - Next.js 15.3
+  - TypeScript
+  - Material-UI (MUI)
+  - Tailwind CSS
+
+- **State Management**:
+  - Redux Toolkit
+  - React Query (for data fetching)
+
+- **Backend API**:
+  - Custom API built with Next.js for product data and user authentication.
+
+## Features
+
+- **Product Browsing**: View a variety of fresh products like fruits, vegetables, and more.
+- **Product Details**: Each product comes with detailed information, including images, price, description, and reviews.
+- **User Authentication**: Users can sign in to access personalized features like favorites and order history.
+- **Responsive Design**: The platform is fully responsive, optimized for both mobile and desktop users.
+- **Related Products**: Suggestions based on product categories to enhance the shopping experience.
+
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+To run the project locally, you need to have the following tools installed:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js (>=14.x)
+- npm (>=6.x)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository:
 
-## Learn More
+    ```bash
+    git clone https://github.com/MethuParoi/sm-technology-task
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Navigate to the project directory:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    cd sm-technology-task
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Install the dependencies:
 
-## Deploy on Vercel
+    ```bash
+    npm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Start the development server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# sm-technology-task
+    ```bash
+    npm run dev
+    ```
+
+5. Visit [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+
+## Deployment
+
+1. To build the app for production:
+
+    ```bash
+    npm run build
+    ```
+
+2. To start the production server:
+
+    ```bash
+    npm start
+    ```
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/feature-name`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/feature-name`).
+5. Open a Pull Request.
+
+
+## Acknowledgements
+
+- **Material-UI**: Used for the design components.
+- **Next.js**: For building the modern React application with server-side rendering.
+- **Tailwind CSS**: For utility-first CSS framework.

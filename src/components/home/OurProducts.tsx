@@ -62,7 +62,7 @@ const OurProducts: React.FC = () => {
     );
 
   return (
-    <section className="relative w-[90%] md:w-[83.33%] mx-auto pt-16 sm:pt-20 md:pt-36 lg:pt-44 xl:pt-48">
+    <section className="relative w-[90%] md:w-[83.33%] mx-auto pt-16 sm:pt-20">
       {/* Category Filters */}
       <div className="text-center mb-12">
         <Chip

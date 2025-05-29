@@ -28,7 +28,7 @@ const OurBlog: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-[90%] md:w-[83.33%] mx-auto py-20 sm:py-24 md:py-28 lg:py-32 xl:py-36 bg-white">
+    <section className="relative w-[90%] md:w-[83.33%] mx-auto py-20 sm:py-24  bg-white">
       <div className="text-center mb-8">
         <Chip
           label="Our Blog"

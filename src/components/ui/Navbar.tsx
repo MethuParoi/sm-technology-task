@@ -129,6 +129,7 @@ export default function Navbar() {
     <>
       <AppBar
         position="fixed"
+        className="px-[.5rem] sm:px-[2rem]"
         sx={{
           backgroundColor:
             scrolled || pathname !== "/" ? "white" : "transparent",
@@ -136,7 +137,7 @@ export default function Navbar() {
           color: "black",
           width: "100%",
           //   maxWidth: "90rem",
-          paddingX: "2rem",
+
           left: 1 / 2,
           right: 1 / 2,
         }}
@@ -207,10 +208,12 @@ export default function Navbar() {
                 size="small"
                 sx={{
                   borderColor: scrolled || pathname !== "/" ? "black" : "white",
+                  borderWidth: "2px",
                   color: scrolled || pathname !== "/" ? "black" : "white",
                   borderRadius: "8px",
                   textTransform: "none",
                   paddingX: "2px",
+                  fontWeight: 600,
                   "&:hover": {
                     borderColor:
                       scrolled || pathname !== "/" ? "black" : "white",

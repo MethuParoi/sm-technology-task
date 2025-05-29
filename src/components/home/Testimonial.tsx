@@ -60,7 +60,7 @@ const Testimonial: React.FC = () => {
   };
 
   return (
-    <section className="relative w-[90%] md:w-[83.33%] lg:w-[70.34%] mx-auto pt-20 sm:pt-24 md:pt-28 lg:pt-36">
+    <section className="relative w-[90%] md:w-[83.33%] lg:w-[70.34%] mx-auto pt-20 sm:pt-20">
       {/* Testimonial Section Header */}
       <div className="text-center mb-8">
         <Chip

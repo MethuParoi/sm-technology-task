@@ -6,10 +6,8 @@ import {
   useGetProductsQuery,
 } from "../../store/api/apiSlice";
 import ProductCard, { Product } from "../../components/home/ProductCard";
-import { Button, Chip } from "@mui/material";
+import { Button } from "@mui/material";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
 import Loader from "../../components/ui/Loader/Loader";
 
 interface Category {
@@ -19,7 +17,6 @@ interface Category {
 
 const OurProducts: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
-  const pathname = usePathname();
 
   // Fetch all categories using RTK Query
   const {
@@ -65,7 +62,6 @@ const OurProducts: React.FC = () => {
     <section className="relative w-[90%] md:w-[83.33%] mx-auto pt-16 pb-16">
       {/* Category Filters */}
       <div className="text-center mb-12">
-       
         <h2 className="text-[clamp(2rem,5vw,4rem)] font-medium mb-4">
           Our Products
         </h2>
@@ -140,7 +136,6 @@ const OurProducts: React.FC = () => {
       )}
 
       {/* See All Products Button */}
-    
 
       <div className="absolute top-10 md:top-30 left-0 md:left-23 z-30">
         <Image

@@ -28,7 +28,7 @@ const SpecialOffer: React.FC = () => {
 
   return (
     <section
-      className="relative bg-cover bg-no-repeat bg-center w-full h-[900px] min-[500px]:h-[1000px] md:h-[1200px] lg:h-[800px] xl:h-[700px] flex justify-center items-center overflow-hidden"
+      className="relative bg-cover bg-no-repeat bg-center w-full h-[700px] min-[500px]:h-[1000px] md:h-[1200px] lg:h-[800px] xl:h-[700px] flex justify-center items-center overflow-hidden"
       style={{ backgroundImage: "url(/primary_bg.jpg)" }}
     >
       <div className="w-[85%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%] aspect-[1.1/1] absolute bottom-0 left-0">
@@ -37,7 +37,7 @@ const SpecialOffer: React.FC = () => {
           alt="Background Image"
           objectFit="contain"
           height={900}
-            width={900}
+          width={900}
         />
       </div>
 
@@ -66,21 +66,21 @@ const SpecialOffer: React.FC = () => {
           src="/special_offer_fruits_bg_bottomup.svg"
           alt="Background Image"
           objectFit="contain"
-            height={900}
-            width={900}
+          height={900}
+          width={900}
         />
       </div>
 
       <div className="w-[90%] md:w-[83.33%] mx-auto flex flex-col-reverse lg:flex-row-reverse lg:justify-between items-center lg:gap-0 gap-6 sm:gap-8 md:gap-10">
         {/* Fruit Image */}
-        <div className="w-full lg:w-[40%]">
+        <div className="hidden sm:block w-full lg:w-[40%]">
           <div className="relative w-full sm:w-[80%] mx-auto lg:w-full aspect-[4/3] lg:scale-150 z-20">
             <Image
               src={img}
-              alt="Girl with Basket"
+              alt="Fruit"
               objectFit="contain"
               width={700}
-                height={700}
+              height={700}
             />
           </div>
         </div>

@@ -1,6 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../store";
 
-let cart: any[] = [];
+export interface CartItem {
+  id: string;
+  productName: string;
+  description: string;
+  price: number;
+  stock: number;
+  images: string[];
+  categoryId: string;
+  isDeleted: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+let cart: CartItem[] = [];
 
 if (typeof window !== "undefined") {
   const cartData = localStorage.getItem("cart");
@@ -20,10 +34,9 @@ const cartSlice = createSlice({
       const newItem = action.payload;
       state.cart.push(newItem);
       state.totalQuantity += 1;
-      
+
       localStorage.setItem("cart", JSON.stringify(state.cart));
     },
-    
 
     clearCart(state) {
       state.cart = [];
@@ -33,12 +46,9 @@ const cartSlice = createSlice({
   },
 });
 
-export const {
-  addItem,
-  clearCart,
-} = cartSlice.actions;
+export const { addItem, clearCart } = cartSlice.actions;
 
-export const getCart = (state) => state.cart.cart;
+export const getCart = (state: RootState): CartItem[] => state.cart.cart;
 
 
 
