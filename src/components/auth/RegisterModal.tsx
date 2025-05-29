@@ -17,6 +17,7 @@ import { useDispatch } from "react-redux";
 import { setToken } from "@/store/features/authSlice";
 import { useRegisterUserMutation } from "@/store/api/apiSlice";
 import { openLoginModal } from "@/store/features/modalSlice";
+import { toast } from "react-toastify";
 
 // Define types for the props
 interface RegisterModalProps {
@@ -40,10 +41,11 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose }) => {
         password,
       }).unwrap();
       dispatch(setToken(response.token));
+      toast.success("Registration successful!");
       onClose(); // Close the modal after registration
     } catch (error) {
       console.error(error);
-      alert("Registration failed. Please try again.");
+      toast.error("Registration failed. Please try again.");
     }
   };
 

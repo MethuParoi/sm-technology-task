@@ -19,6 +19,7 @@ import { useDispatch } from "react-redux";
 import { setToken } from "@/store/features/authSlice"; // Redux action to set token
 import { useLoginUserMutation } from "@/store/api/apiSlice"; // RTK Query hook
 import { openRegisterModal } from "@/store/features/modalSlice"; // Modal actions
+import { toast } from "react-toastify";
 
 // Define types for the props
 interface LoginModalProps {
@@ -38,10 +39,11 @@ const LoginModal: React.FC<LoginModalProps> = ({ open, onClose }) => {
     try {
       const response = await loginUser({ email, password }).unwrap();
       dispatch(setToken(response.token)); // Store token in Redux
+      toast.success("Login successful!");
       onClose(); // Close the modal after login
     } catch (error) {
       console.error(error);
-      alert("Login failed. Please try again.");
+      toast.error("Login failed. Please try again.");
     }
   };
 

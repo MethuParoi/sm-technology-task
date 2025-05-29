@@ -1,6 +1,10 @@
 import { Button } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem, getCart } from "@/store/features/cartSlice";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 export interface Product {
   id: string;
@@ -18,6 +22,10 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const [clicked, setClicked] = useState(false);
+  const dispatch = useDispatch();
+  const cart = useSelector(getCart);
+
   return (
     <div className="relative group w-full p-3 mx-auto bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 transform hover:scale-[101%] hover:shadow-2xl">
       {/* Product Image */}
@@ -61,6 +69,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             borderRadius: "8px",
           }}
           className="w-full"
+          onClick={() => {
+            dispatch(addItem(product));
+            setClicked(true);
+            toast.success("Item added to cart");
+          }}
+          disabled={clicked}
         >
           Add to Cart
         </Button>

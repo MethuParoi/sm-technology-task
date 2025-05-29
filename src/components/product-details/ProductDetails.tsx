@@ -5,6 +5,9 @@ import { Button, Chip, TextField } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Image from "next/image";
 import { ShoppingCart } from "@mui/icons-material";
+import { useDispatch } from "react-redux";
+import { addItem } from "@/store/features/cartSlice";
+import { toast } from "react-toastify";
 
 interface Product {
   id: string;
@@ -18,7 +21,9 @@ interface Product {
 }
 
 export default function ProductDetails({ product }: { product: Product }) {
-  const [qty, setQty] = useState(1); // Initialize the quantity with 1
+  const [qty, setQty] = useState(1);
+  const [clicked, setClicked] = useState(false);
+  const dispatch = useDispatch();
 
   const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     // Ensure the quantity is a positive number and within the range of 1 to stock
@@ -106,6 +111,12 @@ export default function ProductDetails({ product }: { product: Product }) {
               "&:hover": { backgroundColor: "#FF6A1A" },
               textTransform: "none",
             }}
+            onClick={() => {
+              dispatch(addItem(product));
+              setClicked(true);
+              toast.success("Item added to cart");
+            }}
+            disabled={clicked}
           >
             Add to cart
           </Button>

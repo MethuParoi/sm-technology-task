@@ -26,7 +26,6 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useDispatch, useSelector } from "react-redux";
 import {
   closeLogInModal,
   closeRegisterModal,
@@ -36,10 +35,13 @@ import LoginModal from "../../components/auth/LoginModal"; // Import LoginModal 
 import RegisterModal from "../../components/auth/RegisterModal";
 import { AppDispatch } from "@/store/store";
 import { RootState } from "@/store/store";
+import { useDispatch, useSelector } from "react-redux";
+import { getCart } from "@/store/features/cartSlice";
 
 export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
   const pathname = usePathname();
   const { user } = useSelector((state: RootState) => state.auth);
   const loginModalOpen = useSelector(
@@ -49,8 +51,13 @@ export default function Navbar() {
     (state: RootState) => state.modal.registerModalOpen
   );
   const dispatch = useDispatch<AppDispatch>();
+  const CartItem = useSelector(getCart);
+  //   console.log("CartItem", CartItem);
+  const CartQuantity = CartItem.length;
+  console.log("CartQuantity", CartQuantity);
 
   useEffect(() => {
+    setHasMounted(true);
     const handleScroll = () => {
       setScrolled(window.scrollY > 100);
     };
@@ -170,7 +177,12 @@ export default function Navbar() {
             </Link>
 
             {/* Cart */}
-            <Link href="#" className="hidden lg:flex">
+            <div className="hidden lg:flex relative">
+              <div className="absolute w-[1rem] h-[1rem] rounded-[50%] bg-[#FF6A1A] top-0 right-0 flex items-center justify-center z-10 p-2">
+                <p className="text-gray-50 font-medium">
+                  {hasMounted ? CartQuantity : "0"}
+                </p>
+              </div>
               <IconButton
                 sx={{ color: scrolled || pathname !== "/" ? "black" : "white" }}
               >
@@ -178,7 +190,7 @@ export default function Navbar() {
                   <ShoppingCartIcon />
                 </Badge>
               </IconButton>
-            </Link>
+            </div>
 
             {/* Avatar OR Sign‑in */}
             {user ? (
