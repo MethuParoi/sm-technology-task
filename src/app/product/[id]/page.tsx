@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Chip, CircularProgress } from "@mui/material";
+import { Chip } from "@mui/material";
 import {
   useGetProductByIdQuery,
   useGetProductsQuery,
@@ -10,6 +10,7 @@ import { Product } from "@/components/home/ProductCard";
 import ProductDetails from "@/components/product-details/ProductDetails";
 import RelatedProducts from "@/components/product-details/RelatedProducts";
 import { notFound, useParams } from "next/navigation";
+import Loader from "@/components/ui/Loader/Loader";
 
 // Using React.use to unwrap params
 const ProductPage: React.FC = () => {
@@ -35,7 +36,7 @@ const ProductPage: React.FC = () => {
   if (productLoading || allLoading)
     return (
       <div className="flex items-center justify-center h-screen">
-        <CircularProgress />
+        <Loader />
       </div>
     );
 

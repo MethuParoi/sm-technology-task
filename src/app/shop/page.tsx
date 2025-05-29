@@ -5,12 +5,12 @@ import {
   useGetCategoriesQuery,
   useGetProductsQuery,
 } from "../../store/api/apiSlice";
-import ProductCard, { Product } from "./ProductCard";
+import ProductCard, { Product } from "../../components/home/ProductCard";
 import { Button, Chip } from "@mui/material";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Loader from "../ui/Loader/Loader";
+import Loader from "../../components/ui/Loader/Loader";
 
 interface Category {
   id: string;
@@ -62,26 +62,12 @@ const OurProducts: React.FC = () => {
     );
 
   return (
-    <section className="relative w-[90%] md:w-[83.33%] mx-auto pt-16 sm:pt-20 md:pt-36 lg:pt-44 xl:pt-48">
+    <section className="relative w-[90%] md:w-[83.33%] mx-auto pt-16 pb-16">
       {/* Category Filters */}
       <div className="text-center mb-12">
-        <Chip
-          label="Our Products"
-          sx={{
-            backgroundColor: "#eaeee5",
-            color: "#749B3F",
-            fontWeight: 600,
-            fontSize: {
-              xs: "0.75rem",
-              sm: "0.875rem",
-              md: "1rem",
-              lg: "1.25rem",
-            },
-            marginBottom: "16px",
-          }}
-        />
+       
         <h2 className="text-[clamp(2rem,5vw,4rem)] font-medium mb-4">
-          Our Fresh Products
+          Our Products
         </h2>
         <p className="w-[90%] lg:w-[60%] mx-auto text-xs md:text-sm xl:text-base leading-[1.71] text-[#4A4A52] mb-4">
           We pride ourselves on offering a wide variety of fresh and flavorful
@@ -154,34 +140,7 @@ const OurProducts: React.FC = () => {
       )}
 
       {/* See All Products Button */}
-      <Link href={"/shop"}>
-        <div
-          className={`mt-8 text-center relative z-30 ${
-            pathname === "/shop" ? "hidden" : ""
-          }`}
-        >
-          <Button
-            variant="contained"
-            sx={{
-              ":hover": {
-                backgroundColor: "#FF6A1A",
-                border: "1px solid #FF6A1A",
-                color: "white",
-              },
-              backgroundColor: "transparent",
-              border: "1px solid #FF6A1A",
-              boxShadow: "none",
-              color: "#FF6A1A",
-              fontWeight: 600,
-              borderRadius: "8px",
-              display: "inline",
-              textTransform: "capitalize",
-            }}
-          >
-            See All Products
-          </Button>
-        </div>
-      </Link>
+    
 
       <div className="absolute top-10 md:top-30 left-0 md:left-23 z-30">
         <Image
