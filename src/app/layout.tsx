@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Fresh Harvest",
   description:
-    "Your trusted store for premium jackets and hoodies. Designed for style, comfort, and durability.",
+    "Your trusted source for fresh, organic produce delivered to your doorstep. Explore our wide range of fruits, vegetables, and more, all sourced from local farms.",
   icons: {
     icon: "/favicon.ico", // Path to the favicon
   },
