@@ -1,6 +1,6 @@
 # Fresh Harvests
 
-**Live Demo:** [Fresh Harvests Live Demo](https:)
+**Live Demo:** [Fresh Harvests Live Demo](https://fresh-harvest-sm-task.vercel.app/)
 
 Fresh Harvests is a modern e-commerce platform that offers fresh and organic products directly from farms. The website provides a smooth and user-friendly experience for customers to browse various product categories, view product details, add products to the cart, and proceed to checkout.
 
