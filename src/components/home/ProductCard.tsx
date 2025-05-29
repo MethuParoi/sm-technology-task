@@ -8,7 +8,9 @@ export interface Product {
   images: string[];
   price: number;
   categoryId: string;
+  categoryName: string;
   description: string;
+  stock: number;
 }
 
 interface ProductCardProps {

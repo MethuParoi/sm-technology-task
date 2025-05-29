@@ -124,12 +124,7 @@ const Banner = () => {
       {/* Banner Girl Image for Medium and Desktop Devices */}
       <div className="w-[55%] xl:w-[46.5%] h-[auto] aspect-[0.778] hidden md:block absolute right-0 -bottom-[2px] z-20">
         <div className="relative w-full h-full">
-          <Image
-            src={fruits}
-            alt="Girl with Basket"
-            layout="fill"
-            objectFit="contain"
-          />
+          <Image src={fruits} alt="Fruits" layout="fill" objectFit="contain" />
           <Image
             src="/triple_orange.svg"
             alt="Orange Fang"
@@ -141,14 +136,9 @@ const Banner = () => {
       </div>
 
       {/* Banner Girl Image for Mobile Devices */}
-      <div className="w-[220px] min-[425px]:w-[240px] min-[500px]:w-[300px] sm:w-[40%] h-[auto] aspect-[0.544] md:hidden absolute right-0 -bottom-[2px] z-20">
+      <div className="w-[220px] min-[425px]:w-[240px] min-[500px]:w-[300px] sm:w-[40%] h-[auto] aspect-[0.32] md:hidden absolute right-0 -bottom-[2px] z-20">
         <div className="relative w-full h-full">
-          <Image
-            src="/farmer_girl_mobile.png"
-            alt="Girl with Basket"
-            layout="fill"
-            objectFit="contain"
-          />
+          <Image src={fruits} alt="Fruits" layout="fill" objectFit="contain" />
           <Image
             src="/triple_orange.svg"
             alt="Orange Fang"

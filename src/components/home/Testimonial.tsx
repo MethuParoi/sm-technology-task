@@ -4,7 +4,6 @@
 import React, { useEffect, useState } from "react";
 import { Chip } from "@mui/material";
 import Image from "next/image";
-import chef2 from "../../../public/customers/chef2.jpg"; // Importing the image for the first testimonial
 
 // Testimonial type for each testimonial content
 interface Testimonial {

@@ -6,7 +6,18 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Image from "next/image";
 import { ShoppingCart } from "@mui/icons-material";
 
-export default function ProductDetails({ product }: any) {
+interface Product {
+  id: string;
+  productName: string;
+  description: string;
+  price: number;
+  images: string[];
+  categoryName: string;
+  categoryId: string;
+  stock: number;
+}
+
+export default function ProductDetails({ product }: { product: Product }) {
   const [qty, setQty] = useState(1); // Initialize the quantity with 1
 
   const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
