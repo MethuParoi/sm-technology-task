@@ -2,6 +2,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -137,8 +138,22 @@ const Footer = () => {
 
       <hr className="container mx-auto text-[#D9D9D9] my-5" />
 
-      <div className="container mx-auto text-center text-sm text-[#212337] font-semibold">
-        © Copyright 2024, All Rights Reserved by Banana Studio
+      <div className="flex flex-col-reverse md:flex-row justify-between items-center text-sm text-[#212337] font-semibold">
+        <h3 className="text-center">
+          © Copyright 2024, All Rights Reserved by Banana Studio
+        </h3>
+
+        <div className="flex gap-x-5 items-center mb-4 md:mb-0">
+          <div className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full ">
+            <FaTwitter className="text-gray-50 text-2xl" />
+          </div>
+          <div className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full ">
+            <FaFacebookF className="text-gray-50 text-2xl" />
+          </div>
+          <div className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full ">
+            <FaInstagram className="text-gray-50 text-2xl" />
+          </div>
+        </div>
       </div>
     </footer>
   );

@@ -128,8 +128,8 @@ export default function Navbar() {
           boxShadow: "none",
           color: "black",
           width: "100%",
-          maxWidth: "90rem",
-          margin: "0 auto",
+          //   maxWidth: "90rem",
+          paddingX: "2rem",
           left: 1 / 2,
           right: 1 / 2,
         }}
