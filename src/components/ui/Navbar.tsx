@@ -179,7 +179,7 @@ export default function Navbar() {
 
             {/* Cart */}
             <div className="hidden lg:flex relative">
-              <div className="absolute w-[1rem] h-[1rem] rounded-[50%] bg-[#FF6A1A] top-0 right-0 flex items-center justify-center z-10 p-2">
+              <div className="absolute w-[1.1rem] h-[1.1rem] rounded-[50%] bg-[#FF6A1A] top-0 right-0 flex items-center justify-center z-10 p-1">
                 <p className="text-gray-50 font-medium">
                   {hasMounted ? CartQuantity : "0"}
                 </p>

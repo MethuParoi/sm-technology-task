@@ -1,4 +1,4 @@
-import { Target, Mail, Headset, Wrench, PhoneCall, Blend, ShieldCheck } from "lucide-react";
+import { Target, Mail, PhoneCall, Blend, ShieldCheck } from "lucide-react";
 import aboutImg from "../../../public/home/vegetable.jpg";
 import Image from "next/image";
 
